@@ -37,6 +37,31 @@ O Diagrama de Caso de Uso permitiu a identificação clara dos requisitos funcio
 O Diagrama de Sequência modela como os objetos do sistema interagem em um fluxo de tempo.
 Mostra a ordem das mensagens trocadas entre objetos para realizar uma funcionalidade específica, sendo útil para detalhar o comportamento dinâmico de um caso de uso.
 
+1. Usuário abre o aplicativo
+→ App pede autenticação (Login)
+→ Usuário informa login e senha
+
+3. App mostra mapa de vagas
+→ App consulta servidor de vagas em tempo real
+→ Exibe mapa atualizado para o usuário
+
+5. Usuário seleciona e reserva uma vaga
+→ App envia solicitação de reserva para o Banco de Dados
+→ Banco de Dados confirma a reserva
+→ Banco de Dados atualiza status da vaga
+
+6. Durante a utilização
+→ Sistema de Notificação envia alertas (ex.: "Sua reserva vai expirar em 5 minutos")
+
+7. Usuário realiza pagamento
+→ App envia pedido de pagamento ao Sistema de Pagamento
+→ Sistema de Pagamento confirma o pagamento
+→ App atualiza status da vaga (vaga ocupada)
+
+9. Fim da reserva
+→ App encerra a reserva e registra no histórico do usuário
+→ App solicita avaliação de experiência
+
 ## Diagramas de Atividades
 O Diagrama de Atividades descreve o fluxo de trabalho (workflow) ou os processos de um sistema.
 Ele é usado para representar a lógica de negócios ou a sequência de atividades que ocorrem, destacando decisões, paralelismos e interações.
