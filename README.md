@@ -3,8 +3,95 @@
 ## Modelagem de Entidade e Relacionamento (Conceitual e Lógico)
 A Modelagem de Entidade e Relacionamento (MER) é usada para representar a estrutura de dados de um sistema.
 - Modelo Conceitual: Foca nos conceitos principais, como entidades (objetos) e relacionamentos, sem se preocupar com a implementação técnica.
+  ## Entidades
+  
+    ### Usuário
+  - Cadastra-se no sistema com nome, e-mail e senha.
+  - Possui veículos (um usuário pode ter vários veículos).
+  - Recebe notificações (sobre eventos como reservas ou pagamentos).
+  
+  ### Veículo
+  - Cada veículo tem placa, modelo e cor.
+  - Está associado a um usuário.
+  
+  ### Vaga
+  - Representa uma vaga de estacionamento.
+  - Identificada por localização, status e tempo ocupado.
+  - Pertence a uma reserva.
+  
+  ### Reserva
+  - É feita para uma vaga específica.
+  - Controla a ocupação e o status da vaga.
+  - Gera um pagamento correspondente.
+  
+  ### Pagamento
+  - Ligado diretamente a uma reserva.
+  - Contém informações como valor, data e status de pagamento.
+  
+  ### Notificação
+  - Enviada para o usuário.
+  - Contém uma mensagem, data de envio e se foi lida.
+  
+  ## Relações Principais
+  
+  - Um usuário pode possuir vários veículos.
+  - Um usuário pode receber várias notificações.
+  - Cada vaga está associada a exatamente uma reserva no momento da ocupação (1:1).
+  - Cada reserva gera um pagamento (1:1).
 
 - Modelo Lógico: Adiciona detalhes técnicos como tipos de dados e chaves primárias/estrangeiras, preparando o modelo para ser implementado em um banco de dados.
+
+  ## Tabelas
+  
+  ### Usuario
+  - `id_usuario` (INT, PK)
+  - `nome` (VARCHAR(100))
+  - `email` (VARCHAR(100))
+  - `senha` (VARCHAR(255))
+  
+  ### Veiculo
+  - `id_veiculo` (INT, PK)
+  - `id_usuario` (INT, FK)
+  - `placa` (VARCHAR(20))
+  - `modelo` (VARCHAR(50))
+  - `cor` (VARCHAR(30))
+  
+  ### Vaga
+  - `id_vaga` (INT, PK)
+  - `localizacao` (VARCHAR(100))
+  - `status` (ENUM)
+  - `tempo_ocupacao` (TIME)
+  
+  ### Reserva
+  - `id_reserva` (INT, PK)
+  - `id_usuario` (INT, FK)
+  - `id_vaga` (INT, FK)
+  - `data_inicio` (DATETIME)
+  - `data_fim` (DATETIME)
+  - `status_reserva` (ENUM)
+  
+  ### Pagamento
+  - `id_pagamento` (INT, PK)
+  - `id_reserva` (INT, FK)
+  - `valor` (DECIMAL(10,2))
+  - `data_pagamento` (DATETIME)
+  - `status_pagamento` (ENUM)
+  
+  ### Notificacao
+  - `id_notificacao` (INT, PK)
+  - `id_usuario` (INT, FK)
+  - `mensagem` (TEXT)
+  - `data_envio` (DATETIME)
+  - `lida` (TINYINT(1))
+  
+  ## Relações
+  
+  - Um **usuário** pode ter vários **veículos** (1:N).
+  - Um **usuário** pode ter várias **notificações** (1:N).
+  - Um **usuário** pode fazer várias **reservas** (1:N).
+  - Cada **reserva** pertence a um **usuário** e a uma **vaga**.
+  - Cada **reserva** gera um único **pagamento** (1:1).
+  - Cada **vaga** pode ser associada a uma **reserva** no momento da ocupação (1:1). 
 
 ## Diagrama de Classes
 O Diagrama de Classes é usado na UML para representar a estrutura do sistema orientado a objetos.
