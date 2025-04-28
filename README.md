@@ -155,3 +155,54 @@ Mostra a ordem das mensagens trocadas entre objetos para realizar uma funcionali
 ## Diagramas de Atividades
 O Diagrama de Atividades descreve o fluxo de trabalho (workflow) ou os processos de um sistema.
 Ele é usado para representar a lógica de negócios ou a sequência de atividades que ocorrem, destacando decisões, paralelismos e interações.
+
+1.	Iniciar Aplicativo
+   
+2.	Tela de Login
+   - [Decisão] Usuário já cadastrado?
+       Sim: Inserir login e senha, Autenticar
+       Não: Ir para Cadastro de Usuário
+     
+3.	Cadastro de Usuário
+- Preencher informações (nome, senha, dados do veículo)
+- Confirmar cadastro ➔ Voltar para Tela de Login
+
+4.	[Decisão] Acessar mapa?
+  Sim: Acessar mapa
+ 
+6.	Tela Principal (Mapa de Vagas Disponíveis)
+- Sistema atualiza mapa em tempo real
+  Usuário pode:
+  Visualizar vagas
+  Aplicar filtros (proximidade, acessibilidade)
+  
+6.	Selecionar Vaga
+- [Decisão] Deseja reservar vaga?
+  Sim: Reservar vaga (tempo limitado)
+	Não: Navegar livremente no mapa
+
+7.	Receber Notificações
+- Notificação de tempo de uso
+- Notificação de término de reserva
+
+8.	Realizar Pagamento
+- Escolher método (cartão crédito, débito, carteira digital)
+  Confirmar pagamento
+  [Decisão] Pagamento aprovado?
+  	Sim: Vaga ok
+    Não: Exibir erro e tentar novamente
+
+  
+9.	Histórico de Utilização
+- Visualizar histórico de vagas usadas e valores pago
+
+10.	Avaliar App
+-Enviar feedback sobre app utilizada
+
+11.	Suporte
+- Caso necessário, abrir chat de suporte
+
+Fim
+
+
+
