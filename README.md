@@ -1,9 +1,11 @@
 # EstacioneAI
+
 Repositório iniciado para entrega do MPV do software EstacioneAI, o mesmo desenvolvido por:</br>
 [Giovanni Donati](https://github.com/GiovanniDonati),
 [Heitor Baretta Fachin](https://github.com/HeitorFachin),
 [Carlos Rech](https://github.com/carlosgbrs),
-## 
+
+##
 
 ## Stacks
 
@@ -20,8 +22,7 @@ npm install
 ```
 
 ```bash
-# Backend
-cd server
+# Ter o Java 21+ instalado no computador
 ```
 
 - Importante salientar que é necessário a criação de um BD com o nome db_estacioneai.
@@ -38,3 +39,25 @@ cd server
    |── src/        # Pasta com código fonte
    └── target/     # Pasta com o código compilado
 ```
+
+## Desenvolvimento
+
+- Subir a aplicação frontend, execute:
+
+```bash
+cd app
+npm run dev
+```
+
+O servidor será iniciado na porta 5000 (ou na porta especificada pela variável de ambiente PORT).
+
+---
+
+- Subir o servidor backend, execute:
+
+```bash
+cd server
+./mvnw spring-boot:run
+```
+
+O servidor será iniciado na porta 5001 (ou na porta especificada pela variável de ambiente).

@@ -21,7 +21,7 @@ public class DataInitializer {
                 clientRepo.save(client);
             }
 
-            char[] lines = {'A', 'B', 'C'};
+            char[] lines = {'A', 'B'};
             int spotNumber = 1;
 
             for (char line : lines) {
