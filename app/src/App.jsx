@@ -8,6 +8,7 @@ import {
 import AsideMenu from "./components/Menu/AsideMenu.jsx";
 import SpotPage from "./Page/SpotPage.jsx";
 import Dashboard from "./Page/Dashboard.jsx";
+import Contact from "./Page/Contact.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/spot" element={<SpotPage />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

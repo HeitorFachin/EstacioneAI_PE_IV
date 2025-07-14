@@ -18,11 +18,11 @@ function AsideMenu() {
       <ButtonMenu to="/spot">
         <ParkingCircle /> Spots
       </ButtonMenu>
-      <ButtonMenu>
+      {/* <ButtonMenu>
         <ChartNoAxesCombinedIcon /> Amount
-      </ButtonMenu>
-      <ButtonMenu>
-        <UserCircle /> Acount
+      </ButtonMenu> */}
+      <ButtonMenu to="/contact">
+        <UserCircle /> Contact
       </ButtonMenu>
     </div>
   );
