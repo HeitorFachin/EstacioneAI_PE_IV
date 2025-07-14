@@ -24,7 +24,7 @@ npm install
 cd server
 ```
 
-- Importante salientar que é necessário a criação de um BD com o nome estacioneai, script para criação no caminho ```server/src/main/resources/BD.sql```
+- Importante salientar que é necessário a criação de um BD com o nome db_estacioneai.
 
 ## Estrutura do Projeto
 
@@ -38,20 +38,3 @@ cd server
    |── src/        # Pasta com código fonte
    └── target/     # Pasta com o código compilado
 ```
-
-## Desenvolvimento
-
-- Subir a aplicação frontend, execute:
-```bash
-cd app
-npm run dev
-```
-O servidor será iniciado na porta 3000 (ou na porta especificada pela variável de ambiente PORT). 
-
----
-
-- Subir o servidor backend, execute:
-```bash
-cd app
-```
-O servidor será iniciado na porta 8080 (ou na porta especificada pela variável de ambiente). 
