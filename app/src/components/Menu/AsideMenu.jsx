@@ -15,7 +15,7 @@ function AsideMenu() {
       <ButtonMenu to="/dashboard">
         <Component /> Dashboard
       </ButtonMenu>
-      <ButtonMenu to="/spot">
+      <ButtonMenu to="/spots">
         <ParkingCircle /> Spots
       </ButtonMenu>
       {/* <ButtonMenu>
